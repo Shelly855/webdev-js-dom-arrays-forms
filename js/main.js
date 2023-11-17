@@ -22,10 +22,11 @@ document.querySelector(".reset").addEventListener('click', function(ev){
     document.querySelector('body').setAttribute('class', 'resetBack');
 })
 
-let imageAr = ['images/view1.jpg', 'images/view2.jpg', 'images/view3.jpg', 'images/view4.jpg', 'images/view5.jpg', 'images/view6.jpg'];
+let imageAr = ['images/view1.jpg', 'images/view2.jpg','images/view3.jpg', 'images/view4.jpg', 'images/view5.jpg', 'images/view6.jpg'];
 document.getElementById('myImages').setAttribute('src', imageAr[2]);
 
 function chgImage(){
     console.info('Called');
 }
-setInterval(chgImage, 2000);
+setInterval(chgImage, 4000);
+
