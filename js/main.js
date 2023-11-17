@@ -1,10 +1,10 @@
 document.getElementById('myHeading').innerHTML = "Your Name";
 document.querySelector('nav ul li').setAttribute('class', 'currentPage');
 
-document.getElementById('myTestEvent').addEventListener('click',
-function(ev) {
-    console.dir(ev);
-})
+document.getElementById('myTestEvent').addEventListener("click", myFunction);
+function myFunction(ev) {
+    console.info(ev.target);
+}
 
 document.querySelector(".red").addEventListener('click', function(ev){
     document.querySelector('body').setAttribute('class', "redBack");
