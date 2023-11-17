@@ -6,27 +6,23 @@ function myFunction(ev) {
     console.info(ev.target);
 }
 
-document.querySelector(".red").addEventListener('click', function(ev){
-    document.querySelector('body').setAttribute('class', "redBack");
-})
-
-document.querySelector(".blue").addEventListener('click', function(ev){
-    document.querySelector('body').setAttribute('class', "blueBack");
-})
-
-document.querySelector(".green").addEventListener('click', function(ev){
-    document.querySelector('body').setAttribute('class', "greenBack");
-})
-
-document.querySelector(".reset").addEventListener('click', function(ev){
-    document.querySelector('body').setAttribute('class', 'resetBack');
-})
+let colourButtons = document.querySelectorAll(".colPicker");
+for (let i=0; i < colourButtons.length; i++){
+    colourButtons[i].addEventListener("click", chgColour);
+}
+const bodyElement = document.querySelector("body");
+function chgColour(ev){
+    console.dir(ev.targetclassList);
+    let colourPicked = ev.target.classList[0] + "Back"
+    bodyElement.setAttribute("class", colourPicked);
+}
 
 let imageAr = ['images/view1.jpg', 'images/view2.jpg','images/view3.jpg', 'images/view4.jpg', 'images/view5.jpg', 'images/view6.jpg'];
-document.getElementById('myImages').setAttribute('src', imageAr[2]);
 
-function chgImage(){
-    console.info('Called');
-}
-setInterval(chgImage, 4000);
+let imageCount = 0;
+setInterval(function(){
+    document
+    .getElementById("myImages")
+    .setAttribute("src", imageAr[0]);
+})
 
